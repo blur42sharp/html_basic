@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>W3-Validator</title>
+</head>
+<body>
+    <h1>HTML 구조</h1>
+</body>
+</html>
+
+<!-- 만약 실수로 h1 태그를 /로 닫지 않으면 다음과 같은 문제가 발생한다
+
+    Error: Heading cannot be a child of another heading.
+    From line 9, column 21; to line 9, column 24
+    <h1>HTML 구조2<h1>
+
+    Error: End tag for body seen, but there were unclosed elements.
+    From line 11, column 5; to line 11, column 11
+    <h1>HTML 구조2<h1>    </body>
+
+    Error: Unclosed element h1.
+    From line 9, column 21; to line 9, column 24
+    <h1>HTML 구조2<h1>
+
+    Warning: Empty heading.
+    From line 9, column 21; to line 9, column 24
+    <h1>HTML 구조2<h1>
+
+    Document checking completed.
+    Source:
+
+    <!DOCTYPE html>
+    <html lang="ko">
+        <head>
+            <meta charset="utf-8">
+            <title>HTML 첫 문서</title>
+        </head>
+        <body>
+            <h1>HTML 구조</h1>
+            <h1>HTML 구조2<h1> -> "/"로 닫지 않은 태그 문제
+        </body>
+    </html>
+
+    Used the HTML parser.
+    Total execution time 1 milliseconds. 
+
+    위의 코드에서 <h1>HTML 구조2<h1> 부분에서 닫는 태그가 </h1> 없이 <h1>로 되어 있어 오류가 발생한다. 
+    올바르게 수정하려면 </h1>로 반드시 닫아주어야 한다. -->
