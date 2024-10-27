@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Text Definition Elements</title>
+</head>
+<body>
+    <h1>Text Definition Elements의 종류</h1>
+
+    <section>
+        <p>문장 중 일부를 <b>강조</b>하고자 할 때 사용하는 <i>태그들</i>이다.</p>
+        <p>
+            강조하고 싶은 부분을 두껍게 나타내기 위해 <code>b</code> 태그를 사용한다. 
+            <br> <code>b</code> 태그는 인라인 요소로, 문장 중 일부 텍스트를 굵게 표시하는 데 사용한다. 
+            <br> 또한, <code>i</code> 태그는 이탤릭체로 기울어진 텍스트를 만드는 데 사용한다.
+        </p>
+    </section>
+
+    <section>
+        <p>문장 중 일부를 <strong>강조</strong>하고자 할 때 사용하는 <em>태그들</em>이다.</p>
+        <p>
+            이번에는 강조를 <code>strong</code> 태그로 바꾸고, 이탤릭체 태그를 <code>em</code> 태그로 변경해 보겠다. 
+            <br> 이렇게 설정하면 브라우저에 표시되는 모양은 같지만, 의미상으로는 차이가 있다. 
+            <br> 위의 <code>b</code> 태그와 <code>i</code> 태그는 단순히 텍스트를 시각적으로 강조하는 용도이며 특별한 의미를 담고 있지는 않다. 
+            <br> 반면, <code>strong</code> 태그와 <code>em</code> 태그는 해당 텍스트가 중요하다는 의미를 포함한다. 
+            <br> 따라서 웹사이트를 만들 때 의미 있는 강조가 필요하다면 <code>strong</code>과 <code>em</code> 태그를 사용하는 것이 바람직하다.
+        </p>
+    </section>
+
+    <section>
+        <h4>약어 사용하기</h4>
+        <p>
+            <abbr title="Hypertext Markup Language">HTML</abbr>은 제목, 단락, 목록과 같은 본문을 위한 구조적 의미를 나타내며, 링크와 인용을 통해 구조적인 문서를 작성할 수 있는 방법을 제공한다. 
+            <br> <code>abbr</code> 태그를 사용하면 HTML의 약어를 정의할 수 있다. 
+            <br> 만약 HTML만 작성했다면, 사용자가 HTML의 의미를 검색할 때 페이지가 검색될 가능성이 줄어들겠지만, <code>abbr</code> 태그로 정의하면 사용자가 Hypertext Markup Language와 관련된 키워드로 검색할 때 페이지를 더 쉽게 찾을 수 있다.
+        </p>
+    </section>
+
+    <section>
+        <h4>정의 요소 사용하기</h4>
+        <p>
+            <dfn title="텍스트 대신 이미지로 대체하는 기법">IR 기법</dfn>은 검색 엔진 최적화에 도움이 된다. 
+            <br> <code>dfn</code> 태그는 전문 용어나 특수 용어를 정의할 때 사용하며, <code>title</code> 속성에 설명을 추가하면 검색 엔진에 유리하다.
+        </p>
+    </section>
+
+    <section>
+        <h4>인용문 사용하기</h4>
+        <p>인용문을 작성할 때는 <code>blockquote</code> 태그를 사용하며, 그 예시는 다음과 같다.</p>
+        <blockquote cite="https://www.wah.or.kr:444/Accessibility/define.asp">
+            <p>
+                월드 와이드 웹(World Wide Web)을 창시한 팀 버너스 리(Tim Berners-Lee)는 웹을 "장애에 구애 없이 모든 사람이 손쉽게 정보를 공유할 수 있는 공간"이라고 정의하였다. 
+                <br> 그는 웹 콘텐츠를 제작할 때 모든 사람들이 접근할 수 있도록 해야 한다고 강조하였다.
+            </p>
+            <cite>- 팀 버너스 리 -</cite>
+        </blockquote>
+        <p>
+            인용문 내 출처는 <code>cite</code> 태그를 사용해 명확하게 표시할 수 있다. 
+            <br> 출처를 남기면 사이트의 신뢰성이 높아지고, 웹 표준에 맞춰 다른 사이트에서 가져온 내용임을 명확히 보여줄 수 있다.
+        </p>
+    </section>
+</body>
+</html>
