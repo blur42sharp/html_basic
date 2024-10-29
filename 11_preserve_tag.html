@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Preserve Tag</title> <!-- 정형화된 텍스트를 표시할 때 사용하는 pre 태그 -->
+</head>
+<body>
+    <h1> 정형화된 텍스트(pre 태그)의 특징 </h1>
+    
+    <!-- 일반 p 태그를 사용하여 텍스트를 작성 -->
+    <p>
+        Lorem ipsum, 
+        
+
+                dolor sit amet consectetur adipisicing elit. Nobis ducimus magnam temporibus modi dolorum aspernatur corrupti eos accusamus consectetur, optio eum quibusdam cupiditate expedita corporis et, vel voluptatem quia veniam?
+    </p>
+    
+    <!-- pre 태그를 사용하여 공백과 줄바꿈을 그대로 유지해 텍스트를 출력 -->
+    <pre>
+        Lorem ipsum, 
+
+
+                dolor sit amet consectetur adipisicing elit. Nobis ducimus magnam temporibus modi dolorum aspernatur corrupti eos accusamus consectetur, optio eum quibusdam cupiditate expedita corporis et, vel voluptatem quia veniam?
+    </pre>
+    
+    <!-- 코드 예제를 그대로 출력하기 위해 pre와 code 태그를 함께 사용 -->
+    <pre>
+        <code>
+            <!-- script 태그를 코드 형태로 출력하기 위해 엔티티 코드 사용 -->
+            &lt;script&gt;
+            // JavaScript 코드 작성 영역
+            &lt;/script&gt;
+        </code>
+    </pre>
+</body>
+</html>
+
+<!-- 11_pre_tag.html 파일을 생성한다. 이 파일의 기본 코드는 이전에 작업한 04_inline_level_element.html 파일에서 간단히 복사하여 사용한다.
+
+정형화된 텍스트(Preformatted Text)를 테스트하기 위해 paragraph 요소(p 태그)를 사용하여 lorem 더미 텍스트를 작성한다. 
+그리고 Alt + Z로 줄 정리를 해주어 가독성을 높인다.
+
+p 태그에서는 Enter 키나 스페이스바로 줄바꿈이나 공백을 입력해도 브라우저에서는 그대로 반영되지 않는다. 
+그러나 필요에 따라 공백이나 줄바꿈을 그대로 보여줘야 하는 경우도 있다.
+
+이럴 때는 pre 태그를 사용한다. pre는 preserve(보존)의 약자로, 태그 내부의 공백과 줄바꿈을 그대로 화면에 보존하여 출력해 준다.
+p 태그 대신 pre 태그를 사용하여 저장한 뒤 Open with Live Server로 확인하면 Enter와 스페이스바가 그대로 반영되어 출력되는 것을 볼 수 있다.
+
+코드 예제를 보여줄 때도 pre 태그를 사용할 수 있다. 여기에서는 <pre> 태그 안에 <code> 태그를 함께 사용하여, 코드가
+텍스트 형태로 인식되도록 한다. 
+
+예를 들어 <script></script> 태그처럼 코드가 태그로 인식되지 않고 텍스트로 보이게 하려면, 엔티티 코드로 변환해야 한다. 
+엔티티 코드로 <는 &lt;, >는 &gt;로 표기하여 브라우저가 태그로 오해하지 않도록 해준다.
+
+파일을 저장하고 Open with Live Server로 확인해보면, <script></script> 태그가 화면에 코드 그대로 나오는 것을 볼 수 있다. 
+Enter와 스페이스바가 보존된 상태로, 코드 내용이 정확히 화면에 출력되는 것을 확인할 수 있다. -->
