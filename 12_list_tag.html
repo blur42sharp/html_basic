@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>List Tag</title>
+</head>
+<body>
+
+    <!-- 목록 태그는 웹페이지에서 자주 사용되는 중요한 태그 중 하나이다.
+    네이버 웹사이트를 예로 들어보면, 메일, 카페, 블로그, 지식인, 쇼핑, Pay, TV 등 다양한 메뉴가 나열되어 있다. 
+    또한, 뉴스스탠드 섹션에는 언론사 목록이, 오늘 읽을만한 글 섹션에는 엔터, 스포츠, 자동차, 웹툰, 경제 등이 나열된다.
+    개발자 도구를 열고 네이버의 CSS를 제거하면 이러한 목록들이 ● 표시로 나타나는 것을 볼 수 있다. -->
+
+    <h1>List Tag</h1>
+    
+    <!-- 순서 없는 목록(Unordered List) 작성 예시
+    ul 태그로 목록을 시작하고, 각 항목을 li 태그로 작성하면 ● 표시가 나타난다. -->
+    <h2>Unordered List</h2>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+
+    <!-- Visual Studio Code에서는 'ul>li*4{list-item}'을 작성 후 Tab 키를 누르면
+    ul 태그 안에 li 항목이 4개 생성되며, 각 항목에 list-item이라는 텍스트가 자동으로 추가된다. 
+    이렇게 순서 없는 목록을 빠르게 작성할 수 있으며, 목록 앞에 블릿(bullet)이 표시된다. -->
+    <ul>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+    </ul>
+
+    <!-- 순서 있는 목록(Ordered List) 작성 예시
+    ol 태그로 목록을 시작하면 순서가 자동으로 매겨진다.
+    'ol>li*4{list-item}'을 입력 후 Tab 키를 누르면 ol 태그 내에 4개의 li 항목이 생성되며 숫자가 순서대로 표시된다. -->
+    <h2>Ordered List</h2>
+    <ol>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+    </ol>
+
+    <!-- 정의 목록(Definition List)은 용어와 그에 대한 설명을 나열할 때 사용된다.
+    dl 태그로 목록을 시작하고 dt 태그로 용어를, dd 태그로 설명을 작성한다. -->
+    <h2>Definition List</h2>
+    <dl>
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+    </dl>
+
+    <!-- 목록 작성 시 주의할 점
+    ul, ol, dl 태그의 자식 요소로는 li, dt, dd 이외의 다른 요소가 올 수 없다.
+    예를 들어, ul 안에 h3 요소를 넣으면 웹표준 검사 시 오류로 나타난다. 
+    제목을 삽입하고 싶다면, 목록 태그 외부에 두거나 목록 내에서도 필요에 따라 h2, p 등을 ul 위에 두어야 한다. -->
+    <hr>
+    <h1>List Tag2</h1>
+    <h2>Unordered List</h2>
+    <h3>list title</h3> <!-- 제목을 넣는 바람직한 방법 ul위에 넣기 -->
+    <ul>
+        <!-- <h3>list title</h3>  웹표준 검사에서 오류 -->
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+
+    <ul>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+        <li>list-item</li>
+    </ol>
+
+    <!-- 정의 목록의 주의사항으로, dt에는 용어, dd에는 설명을 넣는다.
+    용어마다 여러 개의 설명을 추가할 수 있으며, 단일 용어에 다양한 설명을 넣어도 무방하다. 
+    그러나 여러 개의 용어에 하나의 설명만 넣는 것은 잘못된 예시이다. -->
+    <h2>Definition List</h2>
+    <dl>
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+    </dl>
+
+    <dl> <!-- 잘못된 예시 -->
+        <dt>definition term</dt>
+        <dt>definition term</dt>
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+    </dl>
+
+    <!-- 서브 메뉴 작성 예시
+    하위 목록을 만들어 마우스를 올렸을 때 각 항목의 하위 항목이 나타나는 구조를 작성할 수 있다. 
+    About Us에 서브 메뉴로 Ceo Greeting, History, Vision이 있다면 ul 내부에 또 다른 ul을 작성하여 하위 메뉴를 구성한다. -->
+    <hr>
+    <h2>서브 메뉴</h2>
+    <ul>
+        <li>About Us
+            <ul>
+                <li>Ceo Greeting</li>
+                <li>History</li>
+                <li>Vision</li>
+            </ul>
+        </li>
+        <li>Works</li>
+        <li>Services</li>
+        <li>Location</li>
+    </ul>
+
+    <!-- 주의사항
+    만약 목록이 아닌 단일 요소라면 리스트가 아닌 별도의 제목이나 패러그래프로 작성하는 것이 바람직하다.
+    list는 동일한 중요도의 항목이 여러 개 있을 때 사용해야 그 의미를 가질 수 있다. -->
+    <ul>
+        <li>list item</li>
+    </ul>
+    <ul>
+        <li>list item</li>
+    </ul>
+    <ul>
+        <li>list item</li>
+    </ul>
+
+    <!-- 잘못된 서브 메뉴 예시 
+    아래와 같이 서브 메뉴를 별도의 ul로 작성하는 것은 비효율적이며 웹표준에 부합하지 않는다. 
+    JavaScript와 CSS를 통해 동적 요소를 추가할 수 있지만, HTML 구조 자체는 콘텐츠의 의미를 제대로 전달하도록 작성해야 한다. -->
+    <h2>서브 메뉴</h2>
+    <ul> 
+        <li>About Us</li>
+        <li>Works</li>
+        <li>Services</li>
+        <li>Location</li>
+    </ul>
+    <ul>
+        <li>Ceo Greeting</li>
+        <li>History</li>
+        <li>Vision</li>
+    </ul>
+
+</body>
+</html>
