@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Anchor Tags</title>
+</head>
+<body>
+    <h1>앵커 태그</h1>
+    <p>앵커 태그는 웹 페이지에서 다른 페이지로 연결하는 링크를 만든다. 
+    <br>앵커라는 단어는 배를 정박할 때 닻을 내려 고정하는 것과 유사하게 생각할 수 있다. 
+    <br>HTML에서 링크는 매우 중요한 요소이며, 링크를 설정할 때는 절대 경로와 상대 경로를 이해해야 한다.</p>
+    
+    <hr>
+    <h2>절대 경로</h2>
+    <p>절대 경로는 항상 동일한 경로를 가리키며, 아래의 네이버와 다음 링크가 그 예시이다. 
+    <br>앵커 태그는 <code>&lt;a&gt;</code> 태그로 시작하며, <code>href</code> 속성은 'hypertext reference'를 의미하고 링크할 URL을 지정한다. 
+    <br>링크를 클릭하면 해당 페이지로 이동한다. 'http' 방식은 'http://'로 시작하고, 보안 서버가 있는 경우 'https://'로 시작한다. 
+    <br>이러한 주소는 모두 절대 경로로 간주된다.</p>
+    <a href="http://www.naver.com">네이버</a>
+    <a href="http://www.daum.net">다음</a>
+    
+    <hr>
+    <h2>상대 경로</h2>
+    <p>상대 경로를 확인하기 위해, 이전에 작성한 테이블에 링크를 걸어보자. 
+    <br>같은 디렉토리 내에서 14_anchor_tag.html을 작성하고, 12_table_tag.html을 링크로 걸 수 있다. 
+    <br>같은 디렉토리에 있는 경우에는 링크를 걸려고 할 때 <code>href</code>에 걸고자 하는 파일의 이름을 적어주면 된다. 
+    <br>링크를 건 후 테이블의 사용법이라고 작성하고 저장한 후, 브라우저에서 테이블 링크를 확인하면 이전에 작성했던 테이블에 대한 내용이 나오는 것을 볼 수 있다.</p>
+    <a href="13_table_tag.html">테이블의 사용법</a>
+
+    <hr>
+    <h2>절대 경로 방식 예시</h2>
+    <p>만약 14_anchor.html을 작성하고 있는 이 사이트의 주소가 abc.com이라고 한다면, 이렇게 작성할 수도 있다. 
+    <br>같은 폴더 안에 13번 테이블 링크를 <code>www.abc.com/13_table.html</code>이라고 작성할 수 있다. 
+    <br>이는 절대 경로로 작성하는 방식이다. 
+    <br>예를 들어, 현재 브라우저 주소가 <code>http://127.0.0.1:5500/13_table_tag.html</code>일 때, 다음과 같이 절대 경로 방식으로 링크를 작성할 수 있다.</p>
+    <a href="http://127.0.0.1:5500/13_table_tag.html">절대경로 방식</a>
+
+    <hr>
+    <h2>상대 경로 방식 예시</h2>
+    <p>상대 경로 방식은 같은 폴더 안에서 현재 작성하는 파일을 기준으로 상대가 어디에 있는지를 나타낸다. 
+    <br>따라서 같은 폴더 안에 있으니까 파일 이름만 넣는 방식으로도 가능하다.</p>
+    <a href="13_table_tag.html">상대경로 방식</a>
+
+    <hr>
+    <h2>링크 클릭 시 주의사항</h2>
+    <p>링크를 작성할 때 주의해야 할 부분이 있다. 
+    <br>예를 들어, 사용자가 네이버 링크를 클릭하여 네이버 사이트를 보게 되면, 우리 페이지로 다시 돌아오는 방법이 사라질 수 있다. 
+    <br>따라서 외부 페이지의 경우에는 우리의 페이지에서 직접 열리는 것이 아닌 새 탭 또는 새 창으로 열려야 한다. 
+    <br>새 탭 또는 새 창으로 열리게 하려면, <code>target</code> 속성을 추가하고 값으로 <code>_blank</code>를 넣어야 한다.</p>
+    <a href="http://www.naver.com" target="_blank">네이버 (새탭)</a>
+    <a href="http://daum.net" target="_blank">다음 (새탭)</a>
+
+    <hr>
+    <h2>target 속성 값</h2>
+    <p>target에 넣을 수 있는 값은 다음과 같다.</p>
+    <ul>
+        <li><code>_self</code>: 기본값으로 현재 창에서 열린다.</li>
+        <li><code>_blank</code>: 새 창이나 새 탭에서 열린다.</li>
+        <li><code>_parent</code>: 부모 프레임에서 열린다.</li>
+        <li><code>_top</code>: 전체 창에서 열린다.</li>
+    </ul>
+    <p>기본적으로 기본 값은 <code>_self</code>이며, <code>_blank</code>는 새 창이나 새 탭으로 열리는 것이다. 
+    <br>새 탭으로 열리는 <code>_blank</code>만 기억하면 된다.
+    <br>이렇게 간단하게 절대 경로와 상대 경로에 대해 알아보았다. 
+    <br>실제 웹사이트의 구조에서 링크를 어떻게 설정하는지 확인을 위해 <code>anchor_example_base</code> 샘플 코드로 넘어가자.</p>
+</body>
+</html>
