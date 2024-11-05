@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Abc Corporation</title>  
+</head>
+<body>
+	<!-- abc.com을 클릭하면 홈 페이지로 돌아갈 수 있도록 링크를 설정해야 한다. 
+	현재 페이지와 같은 디렉토리인 html에는 index.html이 없으므로, 상위 디렉토리로 나가야 한다.
+	따라서, '../'를 사용하고, 한 단계 더 나가서 '../../'를 사용하여 anchor_example_base에 있는 index.html에 접근한다. -->
+	<h1><a href="../../index.html">abc.com</a></h1>
+
+	<h2>Partners</h2> <!-- Partners 섹션 제목이다. -->
+	
+	<ul>
+		<li><a href="../../about.html">About Us</a></li> 
+		<li><a href="../services.html">Services</a></li>
+		<li><a href="../location.html">Location</a></li> 
+		<li><a href="./partners.html">Partners</a> 
+			<ul>
+				<li><a href="http://www.naver.com" target="_blank">Naver</a></li> 
+				<li><a href="http://www.daum.net" target="_blank">Daum</a></li> 
+			</ul>
+		</li>
+		<li><a href="../catalog.zip">Catalog Download</a></li> 
+		<li><a href="mailto:info@abc.com">Contact Us</a></li> 
+	</ul>
+</body>
+</html>

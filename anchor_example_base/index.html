@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Abc Corporation</title>
+</head>
+<body>
+	<!-- 사이트 로고 클릭 시 홈페이지(index.html)로 이동하게 설정한다. -->
+	<h1><a href="./index.html">abc.com</a></h1> <!-- 상단 h1 로고 -->
+	
+	<h2>Main Menu</h2>
+	<ul> <!-- 메뉴 리스트 시작 -->
+		<!-- 각 메뉴 항목 클릭 시 해당 페이지로 이동한다. -->
+		<li><a href="./about.html">About Us</a></li> <!-- 같은 디렉토리 내 about.html로 링크한다. -->
+		<li><a href="./docs/services.html">Services</a></li> <!-- docs 폴더 내 services.html로 링크한다. -->
+		<li><a href="./docs/location.html">Location</a></li> <!-- docs 폴더 내 location.html로 링크한다. -->
+		<li><a href="./docs/html/partners.html">Partners</a>  <!-- partners 페이지 링크 -->
+			<ul> <!-- 서브메뉴 시작 -->
+				<li><a href="http://www.naver.com" target="_blank">Naver</a></li> <!-- Naver 링크 (새 탭에서 열림) -->
+				<li><a href="http://www.daum.net" target="_blank">Daum</a></li> <!-- Daum 링크 (새 탭에서 열림) -->
+			</ul> <!-- 서브메뉴 끝 -->
+		</li>
+		<li><a href="./docs/catalog.zip">Catalog Download</a></li> <!-- docs 폴더 내 catalog.zip로 링크한다. -->
+		<li><a href="mailto:info@abc.com">Contact Us</a></li> <!-- 메일 프로그램을 실행하여 info@abc.com으로 메일을 보낸다. -->
+	</ul> <!-- 메뉴 리스트 끝 -->
+</body>
+</html>
+
+<!-- 모든 설정이 완료된 후, 라이브 서버에서 확인한다. -->
+<!-- 각 링크가 정상적으로 작동하는지 테스트한다. (예: About Us 페이지 확인) -->
+<!-- 예상대로 작동한다면, 페이지 제목을 '<title>About Us - Abc Corporation</title>'와 같이 설정하는 것이 좋다. -->
+<!-- Catalog Download를 클릭하면 zip 파일이 다운로드된다. -->
+<!-- 브라우저가 해석할 수 없는 파일(exe, js 등)은 다운로드 경고가 표시된다. -->
+<!-- 메일을 클릭하면 메일 프로그램이 열리며, info@abc.com으로 메일을 보낼 수 있도록 설정된다. -->
