@@ -6,22 +6,31 @@
 </head>
 <body>
 	<h1><a href="./index.html">abc.com</a></h1>
-	<!-- 'abc.com'을 클릭하면 메인 페이지인 index.html로 돌아갈 수 있도록 설정한다. -->
-
+	<!-- abc.com을 클릭하면 메인 페이지인 index.html로 돌아갈 수 있도록 설정한다. -->
+	
 	<h2>About Us</h2>
+	<!-- <%%% 15_image_tag %%%>
+	이미지를 출력할 때 <img> 태그의 src 속성에 이미지 경로를, alt 속성에 대체 텍스트를 추가한다. 
+	alt는 이미지가 표시되지 않거나 시각장애인이 스크린 리더를 사용할 때 중요한 역할을 한다. 
+	또한, 이미지 크기는 가능하면 CSS에서 설정하고, <img> 태그에 직접 width와 height를 사용하지 않는 것이 좋다. 
+	이미지 사이즈 조정은 이미지 파일 자체에서 처리해야 로딩 속도를 개선할 수 있다. 
+	더미 이미지를 사용할 때는 "http://placehold.it/300x300"와 같은 서비스로 지정된 크기의 이미지를 표시할 수 있다. -->
+	<img src="images/ABC_com.gif" alt="abc logo"> <!-- abc logo 이미지, alt 속성으로 대체 텍스트 제공 -->
+	<img src="http://placehold.it/300x300" alt="dummy image"> <!-- 더미 이미지, 크기는 300x300으로 지정 -->
+	
 	<ul>
 		<li><a href="./about.html">About Us</a></li>
-		<!-- 'About Us'를 클릭하면 현재 페이지인 about.html이 열린다. -->
+		<!-- About Us를 클릭하면 현재 페이지인 about.html이 열린다. -->
 		
 		<li><a href="./docs/services.html">Services</a></li>
-		<!-- 'Services' 링크는 docs 폴더 내의 services.html 파일로 연결된다. -->
+		<!-- Services 링크는 docs 폴더 내의 services.html 파일로 연결된다. -->
 		
 		<li><a href="./docs/location.html">Location</a></li>
-		<!-- 'Location' 링크는 docs 폴더 내의 location.html 파일로 연결된다. -->
+		<!-- Location 링크는 docs 폴더 내의 location.html 파일로 연결된다. -->
 		
 		<li><a href="./docs/html/partners.html">Partners</a>
 			<ul>
-				<!-- 'Partners' 아래의 서브 메뉴로 외부 링크를 설정한다. -->
+				<!-- Partners 아래의 서브 메뉴로 외부 링크를 설정한다. -->
 				<li><a href="http://www.naver.com" target="_blank">Naver</a></li>
 				<!-- Naver 링크를 클릭하면 새 창에서 Naver 홈페이지가 열린다. -->
 				<li><a href="http://www.daum.net" target="_blank">Daum</a></li>
@@ -30,19 +39,19 @@
 		</li>
 		
 		<li><a href="./docs/catalog.zip">Catalog Download</a></li>
-		<!-- 'Catalog Download' 링크는 docs 폴더의 catalog.zip 파일로 연결된다. -->
+		<!-- Catalog Download 링크는 docs 폴더의 catalog.zip 파일로 연결된다. -->
 		
 		<li><a href="mailto:info@abc.com">Contact Us</a></li>
-		<!-- 'Contact Us'를 클릭하면 이메일 프로그램이 열리도록 설정된다. -->
+		<!-- Contact Us를 클릭하면 이메일 프로그램이 열리도록 설정된다. -->
 	</ul> 
 
 	<hr /> <!-- 아래 링크들은 페이지 내에서 특정 섹션으로 스크롤 이동할 수 있도록 설정된다. -->
 	<p>
-		<a href="#ci">Our CI</a> <!-- 'Our CI' 섹션으로 이동하는 링크 -->
+		<a href="#ci">Our CI</a> <!-- Our CI 섹션으로 이동하는 링크 -->
 		/
-		<a href="#vision">Our Vision</a> <!-- 'Our Vision' 섹션으로 이동하는 링크 -->
+		<a href="#vision">Our Vision</a> <!-- Our Vision 섹션으로 이동하는 링크 -->
 		/
-		<a href="#history">Our History</a> <!-- 'Our History' 섹션으로 이동하는 링크 -->
+		<a href="#history">Our History</a> <!-- Our History 섹션으로 이동하는 링크 -->
 	</p>
 	<hr />
 
