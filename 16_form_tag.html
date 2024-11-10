@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Form Tag</title>
+</head>
+<body>
+    <!-- form 태그는 사용자가 입력한 정보를 서버에 전송하여 회원가입, 검색 등 다양한 작업을 처리하는 데 사용된다.
+    action 속성에는 데이터를 처리할 서버 경로를, method 속성에는 전송 방식을 설정한다. 
+    전송 방식으로는 get과 post가 있으며, get은 데이터가 URL에 노출되고, post는 URL에 노출되지 않아 보안이 필요한 정보에 적합하다. 
+    이 폼은 이름, 이메일, 비밀번호 등 개인정보를 다루므로 post 방식을 사용한다. -->
+
+    <h1>Join Form</h1>
+    <form action="#" method="POST">
+        
+        <!-- 이름 입력 필드 
+        input 태그로 텍스트 입력창을 만들고, 필수 입력 사항임을 required 속성으로 설정한다. 
+        label 태그는 사용자에게 입력 필드의 의미를 명확히 전달하며, for 속성으로 input의 id와 연결하여 클릭 시 입력창에 포커스를 이동시킨다. -->
+        <p>
+            <label for="username">Name:</label>
+            <input type="text" id="username" required>
+        </p>
+        
+        <!-- 이메일 입력 필드
+        type을 email로 설정하여 이메일 형식이 아닌 경우 전송되지 않도록 브라우저에서 자동 검사(validation)를 수행하게 한다. 
+        이메일 형식을 강제하는 방식으로 사용자 실수를 줄이고, 이 필드도 필수 입력 항목이므로 required 속성을 추가한다. -->
+        <p>
+            <label for="useremail">Email:</label>
+            <input type="email" id="useremail" required>
+        </p>
+        
+        <!-- 비밀번호 입력 필드
+        type을 password로 설정하여 입력 시 텍스트가 보이지 않도록 한다. 
+        for 속성과 id 속성을 통해 label과 input을 연결하여, 비밀번호 필드 설명인 Password:를 클릭하면 입력창으로 포커스가 이동한다. 
+        필수 입력 항목으로 설정하기 위해 required 속성을 추가한다. -->
+        <p>
+            <label for="userpassword">Password:</label>
+            <input type="password" id="userpassword" required>
+        </p>
+        
+        <!-- 가입하기 버튼
+        button 태그로 기본 가입하기 버튼을 만들고, 이를 눌렀을 때 입력된 정보가 전송되도록 설정한다. 
+        button의 type 기본값은 submit이므로, 별도로 type 속성을 명시하지 않아도 전송 버튼 역할을 한다. -->
+        <p>
+            <button type="submit">가입하기</button>
+            
+            <!-- 이미지 버튼 예시
+            버튼 안에 이미지 태그를 넣어 이미지를 클릭하면 가입이 진행되도록 설정한다. 
+            이미지는 src 속성에 경로를 지정하여 연결하고, alt 속성을 사용해 이미지가 표시되지 않을 경우 가입하기라는 설명이 나오도록 한다.
+            button 태그는 기본적으로 배경색과 테두리가 존재하며, CSS로 스타일을 통해 배경과 테두리를 조정할 수 있다. 
+            이 방식은 텍스트와 이미지를 조합하여 사용할 수 있는 장점이 있다. -->
+            <button type="submit">
+                <img src="./images/iconfinder_tick.png" alt="가입하기">
+            </button>
+            
+            <!-- input 태그의 type을 image로 설정하여, 이미지 자체가 전송 버튼 역할을 하도록 설정한다. 
+            버튼과 마찬가지로 src 속성으로 이미지를 지정하고 alt 속성으로 텍스트 설명을 추가한다. 
+            image 타입은 별도 스타일링 없이 이미지를 전송 버튼으로 사용할 때 적합하다. 이미지가 대체될 텍스트가 필요하면 alt 속성을 사용한다. -->
+            <input type="image" src="./images/iconfinder_tick.png" alt="가입하기">
+        </p>
+    </form>
+</body>
+</html>
