@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>회원 가입 폼</title>
+</head>
+<body>
+
+    <h1>회원 가입 폼</h1>
+    <!-- <form> 태그는 웹 페이지에서 사용자 정보를 입력받고 서버로 전송하기 위한 폼을 정의한다. action 속성으로 데이터가 전송될 URL을 지정하고, method 속성으로 데이터 전송 방식을 설정한다. -->
+    <form action="#" method="POST">
+        
+        <!-- 필수 입력 항목을 위한 필드셋이다. 필드셋은 관련 정보들을 하나의 그룹으로 묶어서 사용자에게 정보를 명확하게 전달한다. 필드셋에 포함된 정보는 사용자가 필수적으로 입력해야 한다. -->
+        <fieldset>
+            <!-- <legend> 태그는 필드셋의 제목을 나타내며, 이 제목을 통해 사용자는 이 영역이 필수 입력 항목임을 알 수 있다. -->
+            <legend>필수 사항</legend>
+            
+            <!-- 이름 입력 항목이다. 이 입력란은 사용자의 이름을 받기 위한 필수 항목이다. -->
+            <p>
+                <label for="username">이름:</label> 
+                <!-- <label> 태그는 입력란에 대한 설명을 제공하며, for 속성은 연결된 <input> 요소의 id를 가리켜 해당 입력란을 클릭할 때 이 설명이 활성화되도록 돕는다. -->
+                <input type="text" name="username" id="username" required>
+                <!-- type="text"는 일반 텍스트를 입력할 수 있는 필드를 생성하며, required 속성은 이 필드가 비워질 수 없음을 나타낸다. 이를 통해 사용자는 반드시 이름을 입력해야 한다. -->
+            </p>
+
+            <!-- 이메일 입력 항목이다. 이메일 형식의 데이터를 입력받기 위한 필드로, 사용자로 하여금 유효한 이메일 주소만 입력할 수 있도록 제한한다. -->
+            <p>
+                <label for="useremail">이메일:</label>
+                <input type="email" name="useremail" id="useremail" required>
+                <!-- type="email"은 이메일 형식의 입력만 허용하여, 올바른 이메일 주소 형식이 아니면 오류 메시지가 표시된다. required로 필수 항목으로 지정하여 반드시 입력이 필요하다. -->
+            </p>
+
+            <!-- 비밀번호 입력 항목이다. 사용자의 비밀번호를 입력받기 위해 <input>을 비밀번호 타입으로 설정하며, 이를 통해 입력된 비밀번호가 화면에 나타나지 않고 별표(*)로 표시되어 보안성을 높인다. -->
+            <p>
+                <label for="userpassword">비밀번호:</label>
+                <input type="password" name="userpassword" id="userpassword" required>
+                <!-- type="password" 속성은 입력값을 숨겨 입력한 비밀번호가 다른 사람에게 노출되지 않도록 보호한다. required 속성을 추가하여 비밀번호를 필수적으로 입력하도록 한다. -->
+            </p>
+        </fieldset>
+
+        <!-- 옵션 입력 항목을 위한 필드셋이다. 필수 입력 항목과 달리 사용자가 선택할 수 있는 항목을 포함한다. 주소, 성별, 관심 사항 등의 추가 정보를 입력받는다. -->
+        <fieldset>
+            <legend>옵션 사항</legend>
+
+            <!-- 주소 선택 항목이다. 드롭다운 메뉴 형태로 여러 옵션 중 하나를 선택할 수 있도록 한다. <select> 태그로 드롭다운 메뉴를 생성하고, <option> 태그로 선택 가능한 옵션을 정의한다. -->
+            <p>
+                <label for="address">주소:</label>
+                <select name="address" id="address">
+                    <!-- 각 <option>은 사용자가 선택할 수 있는 옵션을 나타내며, value 속성으로 선택된 값을 서버에 전송한다. -->
+                    <option value="서울시">서울시</option>
+                    <option value="경기도">경기도</option>
+                    <option value="제주도">제주도</option>
+                </select>
+            </p>
+
+            <!-- 성별 선택 항목이다. <input type="radio">를 사용하여 여러 선택지 중 하나만 선택할 수 있도록 한다. 동일한 name 값을 사용해 서로 같은 그룹으로 묶어준다. -->
+            <p>
+                <span>성별:</span>
+                <label for="male">남성</label>
+                <input type="radio" name="gender" id="male" value="남성">
+                <label for="female">여성</label>
+                <input type="radio" name="gender" id="female" value="여성">
+                <!-- radio 버튼은 동일한 name 값을 가지면 그룹으로 인식되며, 한 가지만 선택할 수 있도록 한다. -->
+            </p>
+
+            <!-- 관심 사항 선택 항목이다. 체크박스를 사용하여 다중 선택이 가능하도록 한다. 사용자는 관심 있는 모든 항목을 선택할 수 있다. -->
+            <p>
+                <span>관심 사항:</span>
+                <label for="HTML">HTML</label>
+                <input type="checkbox" name="interest" id="HTML" value="HTML">
+                <label for="CSS">CSS</label>
+                <input type="checkbox" name="interest" id="CSS" value="CSS">
+                <label for="Javascript">Javascript</label>
+                <input type="checkbox" name="interest" id="Javascript" value="Javascript">
+                <!-- checkbox는 여러 항목을 동시에 선택할 수 있는 방식으로, 여러 관심 분야를 선택할 수 있도록 해준다. -->
+            </p>
+
+            <!-- 인사말 작성란이다. 다중 줄 텍스트를 입력할 수 있도록 <textarea> 태그를 사용하며, 이로써 자유롭게 여러 줄의 인사말을 입력할 수 있다. -->
+            <p>
+                <label for="message">인사말:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <!-- <textarea>는 cols와 rows 속성을 통해 가로, 세로 크기를 조정할 수 있다. 이를 통해 적당한 크기의 텍스트 입력 창을 제공한다. -->
+            </p>
+
+            <!-- 프로필 이미지 업로드를 위한 입력란이다. 사용자가 자신의 이미지를 업로드할 수 있도록 <input type="file">을 사용하여 파일 선택 창을 제공한다. -->
+            <p>
+                <label for="profile">이미지 등록:</label>
+                <input type="file" id="profile" name="profile">
+                <!-- type="file"은 파일을 선택할 수 있는 입력란을 제공하며, 선택한 파일은 서버로 전송할 수 있게 된다. -->
+            </p>
+        </fieldset>
+
+        <!-- HTML5의 다양한 입력 유형을 실습할 수 있는 필드셋이다. 사용자에게 보다 직관적인 입력 경험을 제공하며, 각 입력 필드는 특정한 데이터 형식을 받도록 설계되어 있다. -->
+        <fieldset>
+            <legend>HTML5 Type</legend>
+
+            <!-- 웹사이트 URL 입력 항목이다. 사용자가 유효한 URL을 입력할 수 있도록 type="url" 속성을 사용하며, 유효하지 않은 URL 형식을 입력하면 오류가 발생한다. -->
+            <p>
+                <label for="website">웹사이트:</label>
+                <input type="url" name="website" id="website">
+                <!-- type="url"은 유효한 URL 형식만을 허용하며, 브라우저에 따라 URL 형식을 자동으로 검증하여 오류를 표시할 수 있다. -->
+            </p>
+
+            <!-- 생년월일 입력 항목이다. 날짜 형식의 입력을 유도하며, 사용자는 달력 선택 창을 통해 손쉽게 날짜를 선택할 수 있다. -->
+            <p>
+                <label for="birth">생년 월일:</label>
+                <input type="date" name="birth" id="birth">
+                <!-- type="date"는 날짜 선택 인터페이스를 제공하여 사용자가 직접 날짜를 입력하지 않아도 손쉽게 선택할 수 있도록 돕는다. -->
+            </p>
+
+            <!-- 학습할 언어를 입력할 때 자동완성 기능을 제공하는 예제다. <datalist>와 <input list="..."> 조합을 통해 입력할 수 있는 옵션을 미리 설정한다. -->
+            <p>
+                <label for="langs">학습할 언어:</label>
+                <input name="length" id="langs" list="mylist">
+                <datalist id="mylist">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="Javascript">
+                    <option value="jQuery">
+                </datalist>
+                <!-- datalist는 사용자가 입력 중 미리 설정된 옵션을 자동완성 목록으로 제공하여, 사용자가 더 쉽게 언어를 선택할 수 있도록 돕는다. -->
+            </p>
+
+            <!-- 경력 기간 입력 필드이다. 사용자가 숫자만 입력할 수 있도록 type="number"를 사용하며, 최소값, 최대값, 증가 단위(step)를 설정하여 숫자 범위를 제한한다. -->
+            <p>
+                <label for="career">경력 기간:</label>
+                <input type="number" name="career" id="career" min="0" max="20" step="2">
+                <!-- type="number"는 숫자만 입력받으며, min과 max 속성으로 입력 범위를 제한하고 step으로 증가 단위를 설정한다. 이를 통해 사용자는 0에서 20 사이의 짝수 값만 입력할 수 있다. -->
+            </p>
+
+            <!-- 학습할 언어 선택을 위한 드롭다운 메뉴로, <optgroup>을 이용해 프론트엔드와 백엔드로 그룹화하여 가독성을 높인다. -->
+            <p>
+                <label for="languages">학습할 언어 선택:</label>
+                <select name="languages" id="languages">
+                    <optgroup label="Frontend">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Javascript">Javascript</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="PHP">PHP</option>
+                        <option value="JSP">JSP</option>
+                        <option value="Node.js">Node.js</option>
+                    </optgroup>
+                </select>
+                <!-- <optgroup>으로 그룹을 나눠 사용자가 보다 쉽게 언어를 선택할 수 있게 한다. -->
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">가입하기</button>
+
+            <!-- <button type="submit">
+                <img src="./images/iconfinder_tick.png" alt="가입하기">
+            </button>
+            
+            <input type="image" src="./images/iconfinder_tick.png" alt="가입하기"> -->
+        </p>
+    </form>
+</body>
+</html>
