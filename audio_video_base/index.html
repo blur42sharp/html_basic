@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML5 비디오와 오디오 태그 예제">
+    <meta name="robots" content="index, follow">
+    <title>Video와 Audio 태그 구현 예제</title>
+</head>
+
+<body>
+    <h1>Multimedia</h1>
+
+    <h2>Video Tag</h2>
+    <!-- HTML5에서는 비디오를 화면에 출력하기 위해 <video> 태그를 사용한다. HTML5에서 주로 지원하는 비디오 포맷은 mp4이며, 범용성이 높아 대부분의 브라우저에서 호환된다. 
+    아래 코드는 video 태그에 직접 mp4 파일 경로를 src 속성으로 설정하여 화면에 비디오를 출력하는 예제다. -->
+    <video src="./video/vivaldi.mp4" controls autoplay muted>
+        <span>이 브라우저는 video를 지원하지 않습니다.</span>
+    </video>
+    
+    <!-- video 태그의 주요 속성
+    - controls: 비디오 재생, 일시 정지, 볼륨 조절 등 기본적인 UI를 제공한다. 이 UI는 브라우저마다 약간씩 다르게 표시될 수 있다.
+    - autoplay: 페이지가 로드될 때 자동으로 비디오를 재생한다. 그러나, 웹 접근성 관점에서 autoplay는 적절한 상황에서만 사용해야 한다. 일부 브라우저는 소리가 있는 비디오의 autoplay를 막기 때문에 아래 muted 속성과 함께 사용한다.
+    - muted: 비디오의 소리를 음소거하여 자동 재생을 가능하게 한다. 웹 접근성 차원에서 소리가 자동으로 재생되면 사용자가 방해를 받을 수 있기 때문에 muted와 함께 사용한다. -->
+    
+    <h2>Video Tag (Poster Image)</h2>
+    <video src="./video/vivaldi.mp4" controls muted poster="./images/vivaldi.jpg">
+        <span>이 브라우저는 video를 지원하지 않습니다.</span>
+    </video>
+
+    <!-- poster 속성
+    비디오 재생 전, 첫 화면에 표시될 이미지를 지정한다. 주로 영상의 하이라이트 장면이나 썸네일 역할을 하며, 비디오가 시작되기 전 사용자가 보게 된다. 
+    이때 poster 속성에 이미지 파일 경로를 지정하여, 유튜브의 썸네일처럼 역할하게 한다. -->
+
+    <h2>다양한 비디오 포맷 설정</h2>
+    <video controls muted poster="./images/vivaldi.jpg">
+        <source src="./video/vivaldi.mp4" type="video/mp4">
+        <source src="./video/vivaldi.webm" type="video/webm">
+        <source src="./video/vivaldi.ogg" type="video/ogg">
+        <source src="./video/vivaldi.ogv" type="video/ogv">
+        <span>이 브라우저는 video를 지원하지 않습니다.</span>
+    </video>
+
+    <!-- <source> 태그:
+    video 태그 내부에 여러 개의 <source> 태그를 추가하여 다양한 포맷을 지원할 수 있다. 브라우저는 지원 가능한 포맷을 우선적으로 로드하여 재생한다.
+    - mp4: 범용적으로 사용되는 비디오 포맷으로 호환성이 높다.
+    - webm: HTML5와 함께 개발된 새로운 포맷으로 일부 브라우저에서 지원된다.
+    - ogg/ogv: HTML5에서 지원하는 또 다른 포맷이다. 
+    이처럼 다양한 포맷을 설정해두면, 비디오 파일 호환성을 높일 수 있다. -->
+
+    <hr>
+    <h2>Audio Tag</h2>
+    <audio src="./audio/honey_bee.mp3" controls>
+        <span>이 브라우저는 mp3를 지원하지 않습니다.</span>
+    </audio>
+
+    <!-- audio 태그
+    오디오 파일을 재생하기 위해 사용한다. src 속성에 오디오 파일 경로를 직접 지정하거나 <source> 태그로 여러 포맷을 지정할 수 있다.
+    - controls 속성: 오디오를 재생, 일시 정지, 볼륨 조절할 수 있는 기본 UI를 제공한다. -->
+
+    <h2>Audio Tag (다양한 포맷)</h2>
+    <audio controls>
+        <source src="./audio/honey_bee.mp3" type="audio/mp3">
+        <source src="./audio/honey_bee.ogg" type="audio/ogg">
+        <span>이 브라우저는 mp3를 지원하지 않습니다.</span>
+    </audio>
+
+    <!-- <source> 태그
+    오디오 파일의 호환성을 높이기 위해 mp3 외에도 HTML5에서 지원하는 ogg 포맷을 추가할 수 있다.
+    브라우저가 지원하는 포맷에 따라 적합한 오디오 파일을 로드하여 재생한다. -->
+
+    <hr>
+    <h2>외부 비디오 임베드 (YouTube)</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4rgSzQwe5DQ?controls=0" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- 유튜브 임베드
+    iframe 태그를 통해 유튜브의 영상을 직접 삽입할 수 있다. width와 height 속성으로 비디오 크기를 조절할 수 있다.
+    주의할 점: 유튜브 영상이 끝난 후 추천 영상이 뜰 수 있는데, 이는 사이트의 분위기와 다르게 보여질 수 있다. -->
+
+    <h2>외부 비디오 임베드 (Vimeo)</h2>
+    <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/440193219?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Vivaldi/Elgar/Mozart"></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- Vimeo 임베드
+    Vimeo는 유튜브와 달리 광고나 관련 영상 없이 깔끔하게 비디오를 제공하며, 특히 브랜드 이미지나 집중도 유지를 위해 적합하다.
+    외부 사이트에 동영상이 호스팅되므로, 트래픽 부담이 줄어든다. -->
+
+    <hr>
+    <h2>클라우드 호스팅 (Cloudinary)</h2>
+    <p>
+        비디오와 오디오 파일을 외부 서버에 호스팅하여 웹사이트의 트래픽 부담을 줄일 수 있는 서비스 중 하나이다.
+        회원가입 후 10GB의 무료 트래픽을 제공하며, 업로드한 파일은 Cloudinary의 절대경로를 이용해 삽입할 수 있다.
+        이러한 외부 호스팅 서비스는 서버의 용량과 트래픽 부담을 줄여 안정적으로 미디어 파일을 제공할 수 있다.
+    </p>
+</body>
+</html>
